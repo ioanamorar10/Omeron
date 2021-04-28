@@ -1,12 +1,7 @@
 Avem nevoie de: 
-    Nodejs:
-    https://nodejs.org/en/download/current/
-
-    Php:
-    https://windows.php.net/download - varianta thread safe
-
-    Angular:
-    npm install -g @angular/cli
+1. Nodejs: https://nodejs.org/en/download/current/
+2. Php: https://windows.php.net/download - varianta thread safe
+3. Angular: npm install -g @angular/cli
 
 Pentru conexiunea la baza de date vom descarca urmatorul driver:
 1. Se descarca pachetul de pe site-ul celor de la PECL, https://pecl.php.net/package/mongodb si se alege ultima versiunea stabila.
