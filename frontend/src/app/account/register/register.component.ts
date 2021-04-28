@@ -54,11 +54,8 @@ export class RegisterComponent implements OnInit {
 
     this.dataService.registerUser(this.form.value).subscribe(res => {
       this.data = res;
-      // console.log(res);
-
       this.submitted = false;
       this.form.reset();
-
       this.router.navigate(['/login']);
     })
   }

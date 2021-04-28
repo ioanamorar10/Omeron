@@ -19,7 +19,6 @@ export class ListComponent implements OnInit {
 
   getUsers(){
     this.dataService.getUsers().subscribe(res => {
-      console.log("!!!!!", res)
       this.users = res;
     })
   }
@@ -29,19 +28,16 @@ export class ListComponent implements OnInit {
 
   deleteUser(id: any){
     this.dataService.delete(id).subscribe(res => {
-      console.log('Delete response', res);
       this.getUsers();
     })
 
   }
 
   editUser(id:any){
-    console.log(id);
     this.router.navigate([`/edit/${id}`]);
   }
 
   addUser(){
-    console.log('SLUuuuti');
     this.router.navigate([`/add`]);
   }
 

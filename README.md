@@ -1,26 +1,23 @@
 Avem nevoie de: 
-    Nodejs:
-    https://nodejs.org/en/download/current/
+1. Nodejs: https://nodejs.org/en/download/current/
+2. Php: https://windows.php.net/download - varianta thread safe
+3. Angular.
+4. MongoDB.
 
-    Php:
-    https://windows.php.net/download - varianta thread safe
+##Frontend:
+Port: http://localhost:4200 <br/>
+`cd frontend` <br/>
+`npm --save install` - pentru inizializarea pachetelor <br>
+`npm run start` - comanda de rulare
 
-    Angular:
-    npm install -g @angular/cli
+##Backend:
 
 Pentru conexiunea la baza de date vom descarca urmatorul driver:
-1. Se descarca pachetul de pe site-ul celor de la PECL, https://pecl.php.net/package/mongodb si se alege ultima versiunea stabila.
+1. Se alege acest pachet de pe website-ul PECL. https://pecl.php.net/package/mongodb. Se alege ultima versiune stabila DLL accesand link-ul DLL.
 2. Alegeti versiunea Thread safe.
-3. Extrageti fisierele descarcate si adaugati-le in directorul php ext.
+3. Extrageti fisierul descarcat si adaugati-l in directorul php\ext.
 4. Se deschide fisierul php.ini si se adauga linia: extension=php_mongo.dll apoi se salveaza.
 
-Backend:
-port: http://localhost:8000
-comanda de rulare: php artisan serve
 
-Frontend:
-port: http://localhost:4200
-pentru inizializarea pachetelor: npm --save install
-comanda de rulare: ng serve
-
-
+Port: http://localhost:8000 <br/>
+Comanda de rulare: `php artisan serve`

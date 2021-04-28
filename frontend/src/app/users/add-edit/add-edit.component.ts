@@ -57,21 +57,15 @@ export class AddEditComponent implements OnInit {
     if (this.isAddMode) {
       this.dataService.registerUser(this.form.value).subscribe(res => {
         this.data = res;
-        // console.log(res);
-
         this.submitted = false;
         this.form.reset();
-
         this.router.navigate(['/users']);
       })
     } else {
       this.dataService.update(this.id, this.form.value).subscribe(res => {
         this.data = res;
-        // console.log(res);
-
         this.submitted = false;
         this.form.reset();
-
         this.router.navigate(['/users']);
       })
     }

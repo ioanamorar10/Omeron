@@ -21,7 +21,6 @@ export class AuthGuard implements CanActivate {
         this.token = localStorage.getItem('token');
         this.userData = jwt_decode(this.token);
         this.role = this.userData.role;
-        console.log("!!!", this.role);
 
         if (this.token) {
             if (route.data.roles && route.data.roles.indexOf(this.role) === -1) {

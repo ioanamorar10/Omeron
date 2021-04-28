@@ -21,9 +21,6 @@ export class AppComponent {
     this.token = localStorage.getItem('token');
     this.userData = jwt_decode(this.token);
     this.role = this.userData.role;
-    console.log(this.token);
-    console.log(this.userData);
-    console.log(this.role);
 
     this.nav= 'login';
 
@@ -37,7 +34,6 @@ export class AppComponent {
       this.nav = 'login'
     }
 
-    console.log("hei hei nav miq", this.nav);
   }
 
   logout(){
