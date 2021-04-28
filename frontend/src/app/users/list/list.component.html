@@ -1,0 +1,36 @@
+<div class="container mg-4 mt-4">
+    <header class="bg-dark text-white p-2 text-center">
+        <h1>Users</h1>
+    </header>
+
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th style="width: 40%">Name</th>
+                <th style="width: 40%">Email</th>
+                <th style="width: 20%"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>
+                    <button (click)="editUser(user._id)" class="btn btn-sm btn-primary mx-2">Edit</button>
+                    <button (click)="deleteUser(user._id)" class="btn btn-sm btn-danger btn-delete-user mx-2">
+                        Delete
+                    </button>
+
+                </td>
+            </tr>
+        </tbody>
+
+        <tr *ngIf="!users">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+        </tr>
+
+    </table>
+    <button (click)="addUser()" class="btn btn-secondary mt-2">Add User</button>
+</div>
